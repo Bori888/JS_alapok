@@ -4,6 +4,9 @@ window.addEventListener("load", function () {
     elemekElerese3();
     elemekElerese4();
     elemekFormazasa1();
+    esemenyKezeles();
+    esemenyKezeles2();
+
 });
 
 function elemekElerese1() {
@@ -37,11 +40,41 @@ function elemekElerese4() {
     console.log(txt)
     LISTA.innerHTML = txt
 
-
-
-
 }
 function elemekFormazasa1() {
-    
+    const FORMAZAS=document.querySelectorAll(".lista")[0]
+    FORMAZAS.classList.add("formazott")
 }
+
+function esemenyKezeles() {
+    const FORMAZAS=document.querySelectorAll(".lista")[0]
+   
+    FORMAZAS.addEventListener("click", myFunction)
+    function myFunction() {
+      
+        document.getElementsByClassName("kattintasutan")[0].innerHTML = FORMAZAS.innerHTML
+    }
+
+}
+
+function esemenyKezeles2() {
+    const ELEM=document.querySelectorAll(".feladat")[0]
+    ELEM.innerHTML = "<button>OK</button>"
+    const GOMB=document.querySelectorAll(".feladat button")[0]
+   
+    GOMB.addEventListener("click", myFunction)
+    function myFunction() {
+        ELEM.innerHTML += "<div><img src='kep.jpg'></div>"
+    }
+}
+
+
+
+
+
+
+
+    
+
+    
 
